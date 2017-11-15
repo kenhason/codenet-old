@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--Font Awesome-->
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
+		<!-- Bootstrap, JQuery, Tether -->
+		<link rel="stylesheet" href='bootstrap/bootstrap.css'>
+		<script src='bootstrap/jquery.min.js'></script>
+		<script src='bootstrap/tether.js'></script>
+		<script src='bootstrap/bootstrap.js'></script>
+
+		<title>CodeNet</title>
+	</head>
+	<body>
+		<script src='javascripts/main.js'></script>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand menu-link">CodeNet</a>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item  menu-link">
+						<a class="nav-link">Home</a>
+					</li>
+					<li class="nav-item  menu-link">
+						<a class="nav-link">Questions</a>
+					</li>
+					<li class="nav-item  menu-link">
+						<a class="nav-link">Answer</a>
+					</li>
+				</ul>
+				<span id="login-button" class="navbar-text menu-link p-0" onclick="onAccountButtonClicked()">
+					<span class="navbar-text">
+			            <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+			        </span>
+				</span>
+			</div>
+		</nav>
+
+		<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-sm" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title" id="exampleModalLabel">Login to CodeNet</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body">
+		                <div id="inexited-user-alert" class="text-danger text-center" style="display: none;">
+		                	<small>User does not exist. <br/>Please register an account!</small>
+		                </div>
+
+		                <button type="button" class="btn btn-secondary btn-block text-left" onclick="loginClick()">
+		                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+		                    Login with Facebook
+		                </button>
+
+		                <button type="button" class="btn btn-secondary btn-block text-left" onclick="registerClick()">
+		                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+		                    Register with Facebook
+		                </button>
+
+		                <div id="exited-user-alert" class="text-danger text-center" style="display: none;">
+		                	<small>User already registered. <br/>Please log in instead!</small>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+	
+	<script src='javascripts/login.js'></script>
+	<script src='javascripts/register.js'></script>
+	<script src='javascripts/navbar.js'></script>
+  </body> 
+</html>
